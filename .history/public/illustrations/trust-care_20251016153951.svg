@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250" fill="none">
+  <!-- Background circles -->
+  <circle cx="70" cy="70" r="50" fill="#FFF8F3" opacity="0.5"/>
+  <circle cx="230" cy="180" r="45" fill="#CDE7F0" opacity="0.4"/>
+  
+  <!-- Large heart in center -->
+  <path d="M150 100 Q140 85 125 85 Q105 85 105 105 Q105 130 150 165 Q195 130 195 105 Q195 85 175 85 Q160 85 150 100 Z" fill="#FADADD" opacity="0.8"/>
+  
+  <!-- Inner heart detail -->
+  <path d="M150 110 Q143 100 135 100 Q125 100 125 110 Q125 125 150 150 Q175 125 175 110 Q175 100 165 100 Q157 100 150 110 Z" fill="white" opacity="0.4"/>
+  
+  <!-- Small child figure on left -->
+  <circle cx="100" cy="190" r="10" fill="#CDE7F0"/>
+  <path d="M100 200 L100 220" stroke="#CDE7F0" stroke-width="6" stroke-linecap="round"/>
+  <path d="M93 210 L85 215" stroke="#CDE7F0" stroke-width="5" stroke-linecap="round"/>
+  <path d="M107 210 L115 215" stroke="#CDE7F0" stroke-width="5" stroke-linecap="round"/>
+  
+  <!-- Small child figure on right -->
+  <circle cx="200" cy="190" r="10" fill="#FADADD"/>
+  <path d="M200 200 L200 220" stroke="#FADADD" stroke-width="6" stroke-linecap="round"/>
+  <path d="M193 210 L185 215" stroke="#FADADD" stroke-width="5" stroke-linecap="round"/>
+  <path d="M207 210 L215 215" stroke="#FADADD" stroke-width="5" stroke-linecap="round"/>
+  
+  <!-- Protective hands -->
+  <path d="M70 120 Q60 130 65 145" stroke="#FADADD" stroke-width="8" stroke-linecap="round" opacity="0.5"/>
+  <ellipse cx="65" cy="150" rx="8" ry="12" fill="#FADADD" opacity="0.5"/>
+  
+  <path d="M230 120 Q240 130 235 145" stroke="#CDE7F0" stroke-width="8" stroke-linecap="round" opacity="0.5"/>
+  <ellipse cx="235" cy="150" rx="8" ry="12" fill="#CDE7F0" opacity="0.5"/>
+  
+  <!-- Decorative small hearts -->
+  <path d="M150 50 Q148 48 146 48 Q144 48 144 50 Q144 52 146 54 L150 57 L154 54 Q156 52 156 50 Q156 48 154 48 Q152 48 150 50 Z" fill="#CDE7F0" opacity="0.6"/>
+  
+  <path d="M120 160 Q118 158 116 158 Q114 158 114 160 Q114 162 116 164 L120 167 L124 164 Q126 162 126 160 Q126 158 124 158 Q122 158 120 160 Z" fill="#FADADD" opacity="0.5"/>
+  
+  <path d="M180 160 Q178 158 176 158 Q174 158 174 160 Q174 162 176 164 L180 167 L184 164 Q186 162 186 160 Q186 158 184 158 Q182 158 180 160 Z" fill="#CDE7F0" opacity="0.5"/>
+  
+  <!-- Sparkles -->
+  <circle cx="140" cy="70" r="2" fill="#FADADD"/>
+  <circle cx="160" cy="75" r="2" fill="#CDE7F0"/>
+  <circle cx="90" cy="100" r="2" fill="#FADADD" opacity="0.6"/>
+  <circle cx="210" cy="95" r="2" fill="#CDE7F0" opacity="0.6"/>
+</svg>

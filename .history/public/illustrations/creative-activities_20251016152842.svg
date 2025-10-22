@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250" fill="none">
+  <!-- Background elements -->
+  <circle cx="60" cy="60" r="45" fill="#FFF8F3" opacity="0.5"/>
+  <circle cx="240" cy="190" r="40" fill="#CDE7F0" opacity="0.4"/>
+  
+  <!-- Easel/Table -->
+  <rect x="100" y="180" width="100" height="8" fill="#FADADD" opacity="0.6" rx="2"/>
+  
+  <!-- Art supplies -->
+  <!-- Crayons -->
+  <rect x="110" y="150" width="8" height="35" fill="#FADADD" rx="1"/>
+  <circle cx="114" cy="148" r="4" fill="#FADADD"/>
+  
+  <rect x="125" y="150" width="8" height="35" fill="#CDE7F0" rx="1"/>
+  <circle cx="129" cy="148" r="4" fill="#CDE7F0"/>
+  
+  <rect x="140" y="150" width="8" height="35" fill="#FADADD" rx="1"/>
+  <circle cx="144" cy="148" r="4" fill="#FADADD"/>
+  
+  <!-- Drawing/Paper -->
+  <rect x="160" y="140" width="45" height="50" fill="white" stroke="#CDE7F0" stroke-width="2" rx="2"/>
+  
+  <!-- Child's drawing on paper -->
+  <circle cx="182" cy="155" r="6" fill="#FADADD" opacity="0.6"/>
+  <path d="M175 165 Q182 170 189 165" stroke="#CDE7F0" stroke-width="2" stroke-linecap="round" fill="none"/>
+  <line x1="176" y1="153" x2="178" y2="155" stroke="#FADADD" stroke-width="1.5"/>
+  <line x1="186" y1="153" x2="188" y1="155" stroke="#FADADD" stroke-width="1.5"/>
+  
+  <!-- Paint palette -->
+  <ellipse cx="230" cy="165" rx="25" ry="20" fill="white" stroke="#FADADD" stroke-width="2"/>
+  <circle cx="220" cy="160" r="4" fill="#FADADD"/>
+  <circle cx="235" cy="160" r="4" fill="#CDE7F0"/>
+  <circle cx="227" cy="170" r="4" fill="#FFF8F3" stroke="#FADADD" stroke-width="1"/>
+  
+  <!-- Paintbrush -->
+  <path d="M245 145 L255 135" stroke="#FADADD" stroke-width="3" stroke-linecap="round"/>
+  <circle cx="242" cy="148" r="4" fill="#CDE7F0"/>
+  
+  <!-- Decorative elements -->
+  <path d="M80 120 L83 125 L88 125 L84 129 L86 134 L80 130 L74 134 L76 129 L72 125 L77 125 Z" fill="#FADADD" opacity="0.6"/>
+  <path d="M260 80 L262 84 L266 84 L263 87 L264 91 L260 88 L256 91 L257 87 L254 84 L258 84 Z" fill="#CDE7F0" opacity="0.6"/>
+  
+  <!-- Hearts -->
+  <path d="M140 100 Q137 97 134 97 Q131 97 131 100 Q131 103 134 106 L140 111 L146 106 Q149 103 149 100 Q149 97 146 97 Q143 97 140 100 Z" fill="#FADADD" opacity="0.5"/>
+</svg>

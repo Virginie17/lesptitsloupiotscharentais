@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250" fill="none">
+  <!-- Background -->
+  <circle cx="60" cy="60" r="45" fill="#CDE7F0" opacity="0.3"/>
+  <circle cx="240" cy="190" r="40" fill="#FFF8F3" opacity="0.5"/>
+  
+  <!-- Baby in cradle/carrier -->
+  <ellipse cx="150" cy="180" rx="60" ry="20" fill="#FADADD" opacity="0.2"/>
+  
+  <!-- Cradle base -->
+  <rect x="110" y="140" width="80" height="50" rx="10" fill="white" stroke="#FADADD" stroke-width="3"/>
+  <path d="M110 165 Q150 155 190 165" stroke="#CDE7F0" stroke-width="2" fill="none" opacity="0.5"/>
+  
+  <!-- Baby -->
+  <circle cx="150" cy="160" r="12" fill="#FADADD"/>
+  <ellipse cx="150" cy="175" rx="15" ry="8" fill="#FADADD" opacity="0.7"/>
+  
+  <!-- Blanket -->
+  <path d="M135 170 Q150 175 165 170" stroke="#CDE7F0" stroke-width="4" stroke-linecap="round" opacity="0.6"/>
+  
+  <!-- Baby features -->
+  <circle cx="145" cy="158" r="1.5" fill="#333"/>
+  <circle cx="155" cy="158" r="1.5" fill="#333"/>
+  <path d="M147 165 Q150 167 153 165" stroke="#FADADD" stroke-width="1" fill="none" opacity="0.8"/>
+  
+  <!-- Mobile above cradle -->
+  <line x1="150" y1="100" x2="150" y2="120" stroke="#CDE7F0" stroke-width="2"/>
+  <line x1="140" y1="100" x2="160" y2="100" stroke="#CDE7F0" stroke-width="2"/>
+  
+  <!-- Hanging toys -->
+  <line x1="135" y1="100" x2="135" y2="115" stroke="#FADADD" stroke-width="1.5"/>
+  <circle cx="135" cy="118" r="5" fill="#FADADD"/>
+  
+  <line x1="150" y1="100" x2="150" y2="112" stroke="#CDE7F0" stroke-width="1.5"/>
+  <path d="M147 112 L150 118 L153 112 Z" fill="#CDE7F0"/>
+  
+  <line x1="165" y1="100" x2="165" y2="115" stroke="#FADADD" stroke-width="1.5"/>
+  <rect x="162" y="118" width="6" height="6" fill="#FADADD" rx="1"/>
+  
+  <!-- Caring hands (adult) -->
+  <path d="M90 150 Q85 145 95 140" stroke="#FADADD" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+  <ellipse cx="95" cy="137" rx="10" ry="6" fill="#FADADD" opacity="0.4"/>
+  
+  <path d="M210 150 Q215 145 205 140" stroke="#CDE7F0" stroke-width="6" stroke-linecap="round" opacity="0.4"/>
+  <ellipse cx="205" cy="137" rx="10" ry="6" fill="#CDE7F0" opacity="0.4"/>
+  
+  <!-- Hearts -->
+  <path d="M150 70 Q147 67 144 67 Q141 67 141 70 Q141 73 144 76 L150 81 L156 76 Q159 73 159 70 Q159 67 156 67 Q153 67 150 70 Z" fill="#FADADD" opacity="0.6"/>
+  
+  <path d="M200 110 Q198 108 196 108 Q194 108 194 110 Q194 112 196 114 L200 117 L204 114 Q206 112 206 110 Q206 108 204 108 Q202 108 200 110 Z" fill="#CDE7F0" opacity="0.5"/>
+  
+  <path d="M100 110 Q98 108 96 108 Q94 108 94 110 Q94 112 96 114 L100 117 L104 114 Q106 112 106 110 Q106 108 104 108 Q102 108 100 110 Z" fill="#FADADD" opacity="0.5"/>
+  
+  <!-- Stars -->
+  <circle cx="180" cy="80" r="2" fill="#CDE7F0"/>
+  <circle cx="120" cy="90" r="2" fill="#FADADD"/>
+  <circle cx="220" cy="130" r="2" fill="#CDE7F0" opacity="0.7"/>
+</svg>

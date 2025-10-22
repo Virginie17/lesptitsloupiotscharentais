@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250" fill="none">
+  <!-- Background -->
+  <circle cx="50" cy="50" r="40" fill="#CDE7F0" opacity="0.3"/>
+  <circle cx="250" cy="200" r="45" fill="#FFF8F3" opacity="0.5"/>
+  
+  <!-- Book -->
+  <rect x="100" y="140" width="100" height="70" fill="white" stroke="#FADADD" stroke-width="3" rx="3"/>
+  <line x1="150" y1="140" x2="150" y2="210" stroke="#FADADD" stroke-width="2"/>
+  
+  <!-- Pages/text lines -->
+  <line x1="110" y1="155" x2="140" y2="155" stroke="#CDE7F0" stroke-width="2" opacity="0.6"/>
+  <line x1="110" y1="165" x2="135" y2="165" stroke="#CDE7F0" stroke-width="2" opacity="0.6"/>
+  <line x1="110" y1="175" x2="140" y2="175" stroke="#CDE7F0" stroke-width="2" opacity="0.6"/>
+  
+  <line x1="160" y1="155" x2="190" y2="155" stroke="#FADADD" stroke-width="2" opacity="0.6"/>
+  <line x1="160" y1="165" x2="185" y2="165" stroke="#FADADD" stroke-width="2" opacity="0.6"/>
+  <line x1="160" y1="175" x2="190" y2="175" stroke="#FADADD" stroke-width="2" opacity="0.6"/>
+  
+  <!-- Picture in book -->
+  <circle cx="125" cy="195" r="8" fill="#FADADD" opacity="0.4"/>
+  <path d="M170 190 L175 200 L180 195 L185 200" stroke="#CDE7F0" stroke-width="2" fill="none" opacity="0.5"/>
+  
+  <!-- Child figure sitting -->
+  <ellipse cx="150" cy="110" rx="50" ry="15" fill="#FADADD" opacity="0.2"/>
+  <circle cx="150" cy="70" r="15" fill="#FADADD"/>
+  <path d="M150 85 L150 100" stroke="#FADADD" stroke-width="8" stroke-linecap="round"/>
+  <path d="M140 95 L120 110" stroke="#FADADD" stroke-width="6" stroke-linecap="round"/>
+  <path d="M160 95 L180 110" stroke="#FADADD" stroke-width="6" stroke-linecap="round"/>
+  
+  <!-- Hearts floating -->
+  <path d="M220 100 Q217 97 214 97 Q211 97 211 100 Q211 103 214 106 L220 111 L226 106 Q229 103 229 100 Q229 97 226 97 Q223 97 220 100 Z" fill="#FADADD" opacity="0.5"/>
+  
+  <path d="M80 130 Q78 128 76 128 Q74 128 74 130 Q74 132 76 134 L80 137 L84 134 Q86 132 86 130 Q86 128 84 128 Q82 128 80 130 Z" fill="#CDE7F0" opacity="0.5"/>
+  
+  <!-- Stars -->
+  <circle cx="200" cy="70" r="2" fill="#FADADD"/>
+  <circle cx="100" cy="90" r="2" fill="#CDE7F0"/>
+  <circle cx="230" cy="150" r="3" fill="#FADADD" opacity="0.6"/>
+</svg>

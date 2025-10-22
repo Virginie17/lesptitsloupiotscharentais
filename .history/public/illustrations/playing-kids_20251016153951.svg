@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 250" fill="none">
+  <!-- Background -->
+  <circle cx="250" cy="50" r="40" fill="#FFF8F3" opacity="0.6"/>
+  <circle cx="50" cy="200" r="35" fill="#CDE7F0" opacity="0.4"/>
+  
+  <!-- Child playing with toys -->
+  <ellipse cx="150" cy="210" rx="40" ry="12" fill="#FADADD" opacity="0.2"/>
+  
+  <!-- Child body -->
+  <circle cx="150" cy="140" r="20" fill="#FADADD"/>
+  <path d="M150 160 L150 190" stroke="#FADADD" stroke-width="10" stroke-linecap="round"/>
+  <path d="M135 170 L120 175" stroke="#FADADD" stroke-width="8" stroke-linecap="round"/>
+  <path d="M165 170 L180 175" stroke="#FADADD" stroke-width="8" stroke-linecap="round"/>
+  <path d="M140 190 L135 210" stroke="#FADADD" stroke-width="10" stroke-linecap="round"/>
+  <path d="M160 190 L165 210" stroke="#FADADD" stroke-width="10" stroke-linecap="round"/>
+  
+  <!-- Toy blocks -->
+  <rect x="180" y="190" width="25" height="25" fill="#CDE7F0" rx="3"/>
+  <rect x="210" y="190" width="25" height="25" fill="#FADADD" rx="3"/>
+  <rect x="195" y="165" width="25" height="25" fill="#FFF8F3" stroke="#CDE7F0" stroke-width="2" rx="3"/>
+  
+  <!-- Ball -->
+  <circle cx="90" cy="195" r="20" fill="#CDE7F0"/>
+  <path d="M90 175 Q90 195 90 215" stroke="#FADADD" stroke-width="2"/>
+  <path d="M70 195 Q90 195 110 195" stroke="#FADADD" stroke-width="2"/>
+  
+  <!-- Stars and sparkles -->
+  <path d="M150 100 L153 108 L161 108 L155 113 L157 121 L150 116 L143 121 L145 113 L139 108 L147 108 Z" fill="#FADADD" opacity="0.7"/>
+  <circle cx="120" cy="110" r="2" fill="#CDE7F0"/>
+  <circle cx="180" cy="115" r="2" fill="#FADADD"/>
+</svg>
