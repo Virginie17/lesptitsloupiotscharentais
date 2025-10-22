@@ -144,21 +144,6 @@ export function ContactForm() {
             />
           </div>
 
-          {/* Messages de statut */}
-          {submitStatus === 'success' && (
-            <div className="flex items-center gap-2 p-4 bg-green-50 border border-green-200 rounded-lg text-green-800">
-              <CheckCircle size={20} />
-              <p className="font-medium">Message envoyé avec succès ! Je vous répondrai rapidement.</p>
-            </div>
-          )}
-
-          {submitStatus === 'error' && (
-            <div className="flex items-center gap-2 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800">
-              <XCircle size={20} />
-              <p className="font-medium">{errorMessage}</p>
-            </div>
-          )}
-
           <Button type="submit" size="lg" className="w-full" disabled={isSubmitting}>
             <Send className="mr-2" size={18} />
             {isSubmitting ? "Envoi en cours..." : "Envoyer mon message"}
