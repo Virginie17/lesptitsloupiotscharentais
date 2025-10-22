@@ -1,0 +1,10 @@
+# Les Ptits Loupiots Charentais - Robots.txt
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://lesptitsloupiotscharentais.fr/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
