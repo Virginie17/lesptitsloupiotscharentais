@@ -32,10 +32,10 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Envoi de l'email avec Nodemailer
-    const mailOptions = {
-      from: `"Les Ptits Loupiots Charentais" <${process.env.GMAIL_USER}>`,
-      to: process.env.GMAIL_USER, // Envoie à votre propre adresse Gmail
+    // Envoi de l'email
+    const data = await resend.emails.send({
+      from: 'Les Ptits Loupiots <onboarding@resend.dev>',
+      to: ['lesptitsloupiotscharentais@gmail.com'],
       replyTo: email,
       subject: `Nouveau message : ${subject}`,
       html: `
@@ -169,16 +169,13 @@ export async function POST(request: NextRequest) {
           </body>
         </html>
       `,
-    }
-
-    // Envoi de l'email
-    const info = await transporter.sendMail(mailOptions)
+    })
 
     return NextResponse.json(
       { 
         success: true, 
         message: 'Email envoyé avec succès',
-        messageId: info.messageId 
+        data: data 
       },
       { status: 200 }
     )

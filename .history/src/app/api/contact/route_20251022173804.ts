@@ -169,16 +169,13 @@ export async function POST(request: NextRequest) {
           </body>
         </html>
       `,
-    }
-
-    // Envoi de l'email
-    const info = await transporter.sendMail(mailOptions)
+    })
 
     return NextResponse.json(
       { 
         success: true, 
         message: 'Email envoyé avec succès',
-        messageId: info.messageId 
+        data: data 
       },
       { status: 200 }
     )

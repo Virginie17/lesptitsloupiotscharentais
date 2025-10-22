@@ -11,9 +11,7 @@ const links = [
   { href: "/", label: "Accueil" },
   { href: "/a-propos", label: "À propos" },
   { href: "/services", label: "Services" },
-  { href: "/tarifs", label: "Tarifs" },
-  { href: "/zone", label: "Zone" },
-  { href: "/blog", label: "Blog" },
+  { href: "/zone", label: "Zone d'intervention" },
   { href: "/faq", label: "FAQ" },
   { href: "/contact", label: "Contact" },
 ]

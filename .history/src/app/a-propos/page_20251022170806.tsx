@@ -137,7 +137,7 @@ export default function AboutPage() {
                     <span className="font-semibold text-gray-dark">Camille Nuret</span>, diplômée BAFA et CAP Petite Enfance.
                   </p>
                   <p>
-                    Sérieuse, douce et attentive, je veille à la sécurité et à l'épanouissement des enfants qui me sont confiés.
+                    Douce, bienveillante et à l&apos;écoute, je veille sur vos enfants comme si c&apos;étaient les miens.
                   </p>
                 </div>
               </div>
