@@ -54,9 +54,9 @@ export default function ZonePage() {
 							</CardHeader>
 							<CardContent className="text-center space-y-4">
 								<p className="text-lg text-gray-600">
-									Je propose mes services de garde d&apos;enfants à domicile dans{" "}
+									Je propose mes services de garde d'enfants à domicile dans{" "}
 									<span className="font-semibold text-gray-dark">
-										La Rochelle et toute la Communauté d&apos;Agglomération (CDA)
+										La Rochelle et toute la Communauté d'Agglomération (CDA)
 									</span>
 									, dans un rayon de{" "}
 									<span className="font-semibold text-gray-dark">
@@ -104,8 +104,8 @@ export default function ZonePage() {
 									</span>
 								</p>
 								<p className="text-gray-600 mb-6">
-									N&apos;hésitez pas à me contacter pour vérifier si elle se trouve
-									dans mon rayon d&apos;intervention !
+									N'hésitez pas à me contacter pour vérifier si elle se trouve
+									dans mon rayon d'intervention !
 								</p>
 								<Button asChild size="lg">
 									<Link href="/contact">Me contacter</Link>

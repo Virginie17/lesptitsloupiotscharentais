@@ -104,8 +104,8 @@ export default function ZonePage() {
 									</span>
 								</p>
 								<p className="text-gray-600 mb-6">
-									N&apos;hésitez pas à me contacter pour vérifier si elle se trouve
-									dans mon rayon d&apos;intervention !
+									N'hésitez pas à me contacter pour vérifier si elle se trouve
+									dans mon rayon d'intervention !
 								</p>
 								<Button asChild size="lg">
 									<Link href="/contact">Me contacter</Link>
