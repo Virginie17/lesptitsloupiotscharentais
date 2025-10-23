@@ -10,6 +10,13 @@ apiInstance.setApiKey(
 
 export async function POST(request: NextRequest) {
   try {
+    console.log('🔍 Début de la requête API contact')
+    console.log('Variables d\'environnement:', {
+      BREVO_API_KEY: process.env.BREVO_API_KEY ? '✓ Définie' : '✗ Manquante',
+      RECIPIENT_EMAIL: process.env.RECIPIENT_EMAIL || 'Non définie',
+      SENDER_NAME: process.env.SENDER_NAME || 'Non défini',
+    })
+    
     const body = await request.json()
     const { name, email, phone, subject, message } = body
 
@@ -29,6 +36,8 @@ export async function POST(request: NextRequest) {
         { status: 400 }
       )
     }
+
+    console.log('✓ Validation réussie, préparation de l\'email...')
 
     // Envoi de l'email avec Brevo API
     const sendSmtpEmail = new brevo.SendSmtpEmail()
@@ -184,8 +193,12 @@ export async function POST(request: NextRequest) {
         </html>
       `
 
+    console.log('📧 Tentative d\'envoi via Brevo...')
+
     // Envoi de l'email via l'API Brevo
     const result = await apiInstance.sendTransacEmail(sendSmtpEmail)
+
+    console.log('✅ Email envoyé avec succès!', result.body?.messageId)
 
     return NextResponse.json(
       { 
@@ -197,11 +210,15 @@ export async function POST(request: NextRequest) {
     )
 
   } catch (error: any) {
-    console.error('Erreur lors de l\'envoi de l\'email:', error)
+    console.error('❌ Erreur complète:', error)
+    console.error('❌ Message d\'erreur:', error.message)
+    console.error('❌ Réponse Brevo:', error.response?.body || error.body)
+    
     return NextResponse.json(
       { 
         error: 'Erreur lors de l\'envoi de l\'email',
-        details: error.message 
+        details: error.message,
+        brevoError: error.response?.body || error.body
       },
       { status: 500 }
     )
