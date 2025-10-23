@@ -35,7 +35,7 @@ export async function POST(request: NextRequest) {
     
     sendSmtpEmail.sender = {
       name: process.env.SENDER_NAME || 'Les Ptits Loupiots Charentais',
-      email: process.env.SENDER_EMAIL || '99e44a001@smtp-brevo.com',
+      email: process.env.RECIPIENT_EMAIL || 'lesptitsloupiotscharentais@gmail.com',
     }
     
     sendSmtpEmail.to = [
