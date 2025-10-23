@@ -1,21 +1,27 @@
 import { NextRequest, NextResponse } from 'next/server'
 import * as brevo from '@getbrevo/brevo'
 
-// Configuration de l'API Brevo
-const apiInstance = new brevo.TransactionalEmailsApi()
-apiInstance.setApiKey(
-  brevo.TransactionalEmailsApiApiKeys.apiKey,
-  process.env.BREVO_API_KEY || ''
-)
-
 export async function POST(request: NextRequest) {
   try {
-    console.log('🔍 Début de la requête API contact')
-    console.log('Variables d\'environnement:', {
-      BREVO_API_KEY: process.env.BREVO_API_KEY ? '✓ Définie' : '✗ Manquante',
-      RECIPIENT_EMAIL: process.env.RECIPIENT_EMAIL || 'Non définie',
-      SENDER_NAME: process.env.SENDER_NAME || 'Non défini',
-    })
+    console.log('🔍 === DÉBUT DEBUG ===')
+    console.log('BREVO_API_KEY présente:', !!process.env.BREVO_API_KEY)
+    console.log('BREVO_API_KEY longueur:', process.env.BREVO_API_KEY?.length || 0)
+    console.log('RECIPIENT_EMAIL:', process.env.RECIPIENT_EMAIL)
+    
+    if (!process.env.BREVO_API_KEY) {
+      console.error('❌ BREVO_API_KEY manquante!')
+      return NextResponse.json(
+        { error: 'Configuration serveur incorrecte: BREVO_API_KEY manquante' },
+        { status: 500 }
+      )
+    }
+
+    // Configuration de l'API Brevo
+    const apiInstance = new brevo.TransactionalEmailsApi()
+    apiInstance.setApiKey(
+      brevo.TransactionalEmailsApiApiKeys.apiKey,
+      process.env.BREVO_API_KEY
+    )
     
     const body = await request.json()
     const { name, email, phone, subject, message } = body
@@ -37,19 +43,22 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    console.log('✓ Validation réussie, préparation de l\'email...')
+    console.log('✓ Validation réussie')
 
     // Envoi de l'email avec Brevo API
     const sendSmtpEmail = new brevo.SendSmtpEmail()
     
+    const senderEmail = process.env.RECIPIENT_EMAIL || 'lesptitsloupiotscharentais@gmail.com'
+    console.log('📧 Email expéditeur:', senderEmail)
+    
     sendSmtpEmail.sender = {
-      name: process.env.SENDER_NAME || 'Les Ptits Loupiots Charentais',
-      email: process.env.RECIPIENT_EMAIL || 'lesptitsloupiotscharentais@gmail.com',
+      name: 'Les Ptits Loupiots Charentais',
+      email: senderEmail,
     }
     
     sendSmtpEmail.to = [
       {
-        email: process.env.RECIPIENT_EMAIL || 'lesptitsloupiotscharentais@gmail.com',
+        email: senderEmail,
         name: 'Les Ptits Loupiots Charentais',
       },
     ]
