@@ -29,6 +29,9 @@ yarn-error.log*
 .env*.local
 .env
 
+# history files (VS Code extension)
+.history/
+
 # vercel
 .vercel
 
