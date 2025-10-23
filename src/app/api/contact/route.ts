@@ -3,10 +3,11 @@ import * as brevo from '@getbrevo/brevo'
 
 export async function POST(request: NextRequest) {
   try {
-    console.log('🔍 === DÉBUT DEBUG ===')
+    console.log('🔍 === DÉBUT DEBUG V2 ===')
     console.log('BREVO_API_KEY présente:', !!process.env.BREVO_API_KEY)
     console.log('BREVO_API_KEY longueur:', process.env.BREVO_API_KEY?.length || 0)
     console.log('RECIPIENT_EMAIL:', process.env.RECIPIENT_EMAIL)
+    console.log('Toutes les variables ENV:', Object.keys(process.env).filter(k => k.includes('BREVO') || k.includes('RECIPIENT')))
     
     if (!process.env.BREVO_API_KEY) {
       console.error('❌ BREVO_API_KEY manquante!')
