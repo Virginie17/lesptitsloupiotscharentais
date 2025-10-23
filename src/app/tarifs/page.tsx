@@ -299,20 +299,20 @@ export default function TarifsPage() {
 
         {/* CTA */}
         <Card className="bg-gradient-to-r from-pink-500 to-purple-500 text-white border-none">
-          <CardContent className="p-8 text-center">
-            <h2 className="text-3xl font-bold mb-4">Besoin d&apos;un devis personnalisé ?</h2>
-            <p className="text-lg mb-6 opacity-90">
+          <CardContent className="p-6 sm:p-8 text-center">
+            <h2 className="text-xl sm:text-3xl font-bold mb-3 sm:mb-4">Besoin d&apos;un devis personnalisé ?</h2>
+            <p className="text-sm sm:text-lg mb-4 sm:mb-6 opacity-90">
               Chaque famille est unique. Contactez-moi pour un devis gratuit adapté à vos besoins.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="/contact">
-                <Button size="lg" className="bg-white text-pink-500 hover:bg-gray-100 font-semibold">
-                  Demander un devis gratuit
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-stretch sm:items-center">
+              <a href="/contact" className="w-full sm:w-auto">
+                <Button size="lg" className="w-full sm:w-auto bg-white text-pink-500 hover:bg-gray-100 font-semibold px-4 py-3 text-xs sm:text-base whitespace-nowrap">
+                  Devis gratuit
                 </Button>
               </a>
-              <a href="tel:0605040302">
-                <Button size="lg" variant="outline" className="bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold">
-                  Appeler : 06 49 54 35 98
+              <a href="tel:0649543598" className="w-full sm:w-auto">
+                <Button size="lg" variant="outline" className="w-full sm:w-auto bg-transparent border-2 border-white text-white hover:bg-white/10 font-semibold px-4 py-3 text-xs sm:text-base whitespace-nowrap">
+                  📞 06 49 54 35 98
                 </Button>
               </a>
             </div>

@@ -220,7 +220,7 @@ export default function ServicesPage() {
                                     <Clock className="text-rose-powder mx-auto mb-3 group-hover:animate-bounce-gentle" size={48} />
                                     <CardTitle className="text-2xl mb-2">Tarif horaire</CardTitle>
                                     <div className="text-4xl font-bold text-rose-powder mt-4">
-                                        12€<span className="text-lg text-gray-600">/heure</span>
+                                        15€<span className="text-lg text-gray-600">/heure</span>
                                     </div>
                                 </CardHeader>
                                 <CardContent className="pt-6">
