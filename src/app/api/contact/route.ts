@@ -1,14 +1,12 @@
 import { NextRequest, NextResponse } from 'next/server'
-import nodemailer from 'nodemailer'
+import * as brevo from '@getbrevo/brevo'
 
-// Configuration du transporteur Gmail
-const transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.GMAIL_USER,
-    pass: process.env.GMAIL_APP_PASSWORD,
-  },
-})
+// Configuration de l'API Brevo
+const apiInstance = new brevo.TransactionalEmailsApi()
+apiInstance.setApiKey(
+  brevo.TransactionalEmailsApiApiKeys.apiKey,
+  process.env.BREVO_API_KEY || ''
+)
 
 export async function POST(request: NextRequest) {
   try {
@@ -32,13 +30,29 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Envoi de l'email avec Nodemailer
-    const mailOptions = {
-      from: `"Les Ptits Loupiots Charentais" <${process.env.GMAIL_USER}>`,
-      to: process.env.GMAIL_USER, // Envoie à votre propre adresse Gmail
-      replyTo: email,
-      subject: `Nouveau message : ${subject}`,
-      html: `
+    // Envoi de l'email avec Brevo API
+    const sendSmtpEmail = new brevo.SendSmtpEmail()
+    
+    sendSmtpEmail.sender = {
+      name: process.env.SENDER_NAME || 'Les Ptits Loupiots Charentais',
+      email: process.env.SENDER_EMAIL || '99e44a001@smtp-brevo.com',
+    }
+    
+    sendSmtpEmail.to = [
+      {
+        email: process.env.RECIPIENT_EMAIL || 'lesptitsloupiotscharentais@gmail.com',
+        name: 'Les Ptits Loupiots Charentais',
+      },
+    ]
+    
+    sendSmtpEmail.replyTo = {
+      email: email,
+      name: name,
+    }
+    
+    sendSmtpEmail.subject = `Nouveau message : ${subject}`
+    
+    sendSmtpEmail.htmlContent = `
         <!DOCTYPE html>
         <html>
           <head>
@@ -168,17 +182,16 @@ export async function POST(request: NextRequest) {
             </div>
           </body>
         </html>
-      `,
-    }
+      `
 
-    // Envoi de l'email
-    const info = await transporter.sendMail(mailOptions)
+    // Envoi de l'email via l'API Brevo
+    const result = await apiInstance.sendTransacEmail(sendSmtpEmail)
 
     return NextResponse.json(
       { 
         success: true, 
         message: 'Email envoyé avec succès',
-        messageId: info.messageId 
+        messageId: result.body?.messageId 
       },
       { status: 200 }
     )
