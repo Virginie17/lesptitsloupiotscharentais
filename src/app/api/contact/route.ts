@@ -3,16 +3,11 @@ import * as brevo from '@getbrevo/brevo'
 
 export async function POST(request: NextRequest) {
   try {
-    console.log('🔍 === DÉBUT DEBUG V2 ===')
-    console.log('BREVO_API_KEY présente:', !!process.env.BREVO_API_KEY)
-    console.log('BREVO_API_KEY longueur:', process.env.BREVO_API_KEY?.length || 0)
-    console.log('RECIPIENT_EMAIL:', process.env.RECIPIENT_EMAIL)
-    console.log('Toutes les variables ENV:', Object.keys(process.env).filter(k => k.includes('BREVO') || k.includes('RECIPIENT')))
-    
+    // Vérification de la clé API Brevo
     if (!process.env.BREVO_API_KEY) {
-      console.error('❌ BREVO_API_KEY manquante!')
+      console.error('BREVO_API_KEY manquante')
       return NextResponse.json(
-        { error: 'Configuration serveur incorrecte: BREVO_API_KEY manquante' },
+        { error: 'Configuration serveur incorrecte' },
         { status: 500 }
       )
     }
@@ -27,7 +22,7 @@ export async function POST(request: NextRequest) {
     const body = await request.json()
     const { name, email, phone, subject, message } = body
 
-    // Validation des champs
+    // Validation des champs obligatoires
     if (!name || !email || !subject || !message) {
       return NextResponse.json(
         { error: 'Tous les champs obligatoires doivent être remplis' },
@@ -35,7 +30,7 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    // Validation email
+    // Validation du format email
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
     if (!emailRegex.test(email)) {
       return NextResponse.json(
@@ -44,22 +39,18 @@ export async function POST(request: NextRequest) {
       )
     }
 
-    console.log('✓ Validation réussie')
-
-    // Envoi de l'email avec Brevo API
+    // Préparation de l'email
     const sendSmtpEmail = new brevo.SendSmtpEmail()
-    
-    const senderEmail = process.env.RECIPIENT_EMAIL || 'lesptitsloupiotscharentais@gmail.com'
-    console.log('📧 Email expéditeur:', senderEmail)
+    const recipientEmail = process.env.RECIPIENT_EMAIL || 'lesptitsloupiotscharentais@gmail.com'
     
     sendSmtpEmail.sender = {
       name: 'Les Ptits Loupiots Charentais',
-      email: senderEmail,
+      email: recipientEmail,
     }
     
     sendSmtpEmail.to = [
       {
-        email: senderEmail,
+        email: recipientEmail,
         name: 'Les Ptits Loupiots Charentais',
       },
     ]
@@ -203,12 +194,8 @@ export async function POST(request: NextRequest) {
         </html>
       `
 
-    console.log('📧 Tentative d\'envoi via Brevo...')
-
     // Envoi de l'email via l'API Brevo
     const result = await apiInstance.sendTransacEmail(sendSmtpEmail)
-
-    console.log('✅ Email envoyé avec succès!', result.body?.messageId)
 
     return NextResponse.json(
       { 
@@ -220,15 +207,12 @@ export async function POST(request: NextRequest) {
     )
 
   } catch (error: any) {
-    console.error('❌ Erreur complète:', error)
-    console.error('❌ Message d\'erreur:', error.message)
-    console.error('❌ Réponse Brevo:', error.response?.body || error.body)
+    console.error('Erreur lors de l\'envoi de l\'email:', error.message)
     
     return NextResponse.json(
       { 
         error: 'Erreur lors de l\'envoi de l\'email',
-        details: error.message,
-        brevoError: error.response?.body || error.body
+        details: error.message
       },
       { status: 500 }
     )
