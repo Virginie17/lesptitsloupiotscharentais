@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     template: "%s | Les Ptits Loupiots Charentais"
   },
   description: "Garde d'enfants à domicile à La Rochelle (17). Baby-sitter qualifiée BAFA & CAP Petite Enfance. Garde après l'école, mercredis, vacances scolaires. Zone CDA La Rochelle.",
+  verification: {
+    google: "IS4DBHkm_2sSQhhajHCXhJmp2IqHQGZbqaTUjWyxx9U",
+  },
   keywords: [
     "garde d'enfants La Rochelle",
     "baby-sitter La Rochelle",
